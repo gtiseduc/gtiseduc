@@ -1,0 +1,66 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core">
+ 
+    <f:view contentType="text/html">
+       
+        <h:head>
+            <f:facet name="first">
+                <meta content='text/html; charset=UTF-8' http-equiv="Content-Type"/>
+                <title>SISMEPA</title>
+            </f:facet>
+        </h:head>
+      
+        
+        <h:body>
+<div align="center"> 
+            <p:layout style="min-width:1020px;max-width:1020px;min-height:600px">  
+            
+
+                <p:layoutUnit position="north" size="200" resizable="true" closable="true" collapsible="true">
+                    Header
+                </p:layoutUnit>
+
+
+               <p:layoutUnit position="west" size="220">  
+                    <ui:insert name="Menu">
+                        <h:form>
+                            <p:menu style="width: 190px">
+                                <p:submenu label="APRESENTAÇÃO">
+                                    
+                                    <p:menuitem value="SECRETARIA"/>
+                                    <p:menuitem value="GESTÃO ESCOLAR"/> 
+                                    <p:menuitem value="INFORMATIVO EDUCACIONAL"/> 
+                                    <p:menuitem value="CENSO ESCOLAR"/> 
+                                    <p:menuitem value="CALENDÁRIO ESCOLAR"/> 
+                                    <p:menuitem value="MAPA ESTRATEGICO 2017"/> 
+                                    
+                                </p:submenu>
+                            </p:menu>
+                        </h:form>
+                    </ui:insert>
+                </p:layoutUnit>  
+               
+                <p:layoutUnit position="center">
+                    Welcome to PrimeFaces
+                    aasdasdassds
+            asdasdsd        
+                </p:layoutUnit>
+
+                
+             
+                <p:layoutUnit position="south" size="100" closable="true" collapsible="true">
+                    Footer
+                </p:layoutUnit>   
+                
+            </p:layout>
+
+</div>
+        </h:body>
+        
+        
+        
+    </f:view>
+</html>

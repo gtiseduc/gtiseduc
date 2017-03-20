@@ -1,66 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:ui="http://java.sun.com/jsf/facelets"
-      xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:p="http://primefaces.org/ui"
-      xmlns:f="http://java.sun.com/jsf/core">
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+        xmlns:f="http://java.sun.com/jsf/core"
+        xmlns:p="http://primefaces.org/ui">
  
-    <f:view contentType="text/html">
-       
-        <h:head>
-            <f:facet name="first">
-                <meta content='text/html; charset=UTF-8' http-equiv="Content-Type"/>
-                <title>SISMEPA</title>
-            </f:facet>
-        </h:head>
-      
-        
-        <h:body>
-<div align="center"> 
-            <p:layout style="min-width:1020px;max-width:1020px;min-height:600px">  
-            
-
-                <p:layoutUnit position="north" size="200" resizable="true" closable="true" collapsible="true">
-                    Header
-                </p:layoutUnit>
-
-
-               <p:layoutUnit position="west" size="220">  
-                    <ui:insert name="Menu">
+<h:head>
+	<title>${pageTitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<h:outputStylesheet name="css/default.css" />
+</h:head>
+ 
+<h:body>
+	<div id="container">
+ 
+		<div id="header" class="header">
+			<ui:include src="header.xhtml" />
+		</div>
+ 
+		<div id="menu" class="menu">
+			<ui:include src="menu.xhtml" />
+		</div>
+ 
+		<div id="contentMenu" class="contentMenu">
+			<ui:insert name="contentMenu">
+				<p:layoutUnit position="west" size="220">  
+                    <ui:insert name="menu">
                         <h:form>
-                            <p:menu style="width: 190px">
+                            <p:menu style="width: 200px">
                                 <p:submenu label="APRESENTAÇÃO">
-                                    
-                                    <p:menuitem value="SECRETARIA"/>
-                                    <p:menuitem value="GESTÃO ESCOLAR"/> 
-                                    <p:menuitem value="INFORMATIVO EDUCACIONAL"/> 
-                                    <p:menuitem value="CENSO ESCOLAR"/> 
-                                    <p:menuitem value="CALENDÁRIO ESCOLAR"/> 
-                                    <p:menuitem value="MAPA ESTRATEGICO 2017"/> 
-                                    
+                                    <p:menuitem value="SECRETARIA" />
+                                    <p:menuitem value="GESTÃO ESCOLAR"  />   
+                                    <p:menuitem value="INFORMATIVO EDUCACIONAL" />
+                                    <p:menuitem value="CENSOR ESCOLAR"  /> 
+                                    <p:menuitem value="SECRETARIA" />
+                                    <p:menuitem value="CALENDÁRIO ESCOLAR"  />   
+                                     <p:menuitem value="MAPA ESTRATÉGICO 2017"  />   
                                 </p:submenu>
                             </p:menu>
                         </h:form>
                     </ui:insert>
-                </p:layoutUnit>  
-               
-                <p:layoutUnit position="center">
-                    Welcome to PrimeFaces
-                    aasdasdassds
-            asdasdsd        
-                </p:layoutUnit>
-
-                
-             
-                <p:layoutUnit position="south" size="100" closable="true" collapsible="true">
-                    Footer
-                </p:layoutUnit>   
-                
-            </p:layout>
-
-</div>
-        </h:body>
-        
-        
-        
-    </f:view>
+                </p:layoutUnit> 
+			</ui:insert>
+		</div>
+            
+            <div id="content" class="content">
+			<ui:insert name="content">
+				<h:outputText value="buraya içerik gelecek" />
+			</ui:insert>
+		</div>
+ 
+		<div id="footer" class="footer">
+			<ui:include src="footer.xhtml" />
+		</div>
+ 
+	</div>
+</h:body>
+ 
 </html>

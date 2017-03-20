@@ -14,9 +14,15 @@ body {
 	border-radius: 5px;
 }
  
+#alinharNome{
+  color: white;
+  margin: -15px 0px 0px 80px;
+}
 #header {
-	height: 100px;
-	
+    
+        font-family:Arial;
+        font-weight: bold;
+	height: 150px;
 	background-color: #036fab;
 	color: white;
 	padding: 5px;
@@ -24,6 +30,7 @@ body {
 }
  
 #menu {
+   
 	height: 34px;
 	vertical-align: middle;
 	border: 1px solid navy;
@@ -34,6 +41,7 @@ body {
 #contentMenu {
         
         float:left;
+         overflow:hidden;
         min-width:90px;
         padding: 5px;
 	margin: 5px 5px;
@@ -43,20 +51,20 @@ body {
 
 #content {
     
-       float:right;
-      min-width:880px;
+      overflow:hidden;
+      min-width:810px;
        padding: 5px;
 	margin: 5px 5px;
 	border: 1px solid navy;
-	min-height: 300px;
+	min-height: 310px;
 }
  
 #footer {
-       
-      /*height: 100px;
-	position: relative;
+    /*font-family:Arial;*/
+        text-align:center;
+        height: 100px;
 	background-color: #036fab;
 	color: white;
 	padding: 5px;
-	margin: 0px 0px 5px 0px;*/
+	margin: 0px 0px 0px 0px;
 }

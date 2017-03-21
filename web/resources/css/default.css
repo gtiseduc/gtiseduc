@@ -7,10 +7,16 @@ body {
 }
  
 #container {
-        border: 1px solid navy;
+        
+       
 	margin-left: 100px;
 	margin-right: 100px;
 	border-radius: 5px;
+}
+
+#alinharHelp{
+    text-align:right;
+    background-image:url("#{resource['img:iconInterrogacao.png']}");
 }
  
 #alinharNome{
@@ -26,14 +32,13 @@ body {
 	color: white;
 	padding: 5px;
 	margin: 0px 0px 5px 0px;
-        border: 1px solid navy;
+        
 }
  
 #menu {
    
 	height: 34px;
 	vertical-align: middle;
-	border: 1px solid navy;
 	font-weight: bold;
 	margin: 5px 5px;
 }
@@ -45,7 +50,7 @@ body {
         min-width:90px;
         padding: 5px;
 	margin: 5px 5px;
-	border: 1px solid navy;
+	
 	min-height: 300px;
 }
 
@@ -55,7 +60,7 @@ body {
       min-width:710px;
        padding: 5px;
 	margin: 5px 5px;
-	border: 1px solid navy;
+	/*border: 1px solid navy;*/
 	min-height: 325px;
 }
  

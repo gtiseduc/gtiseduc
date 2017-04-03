@@ -1,38 +1,41 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!--
-To change this template, choose Tools | Templates
-and open the template in the editor.
--->
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:p="http://primefaces.org/ui"
-      xmlns:h="http://java.sun.com/jsf/html">
-    <head>
-        <title>TODO supply a title</title>
-    </head>
-    <body>
-      <h:form id="form">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+        xmlns:p="http://primefaces.org/ui">
+ 
+	
+    <p:tabView style="margin-top:20px">
+        <p:tab title="Itens1"></p:tab>
+        <p:tab title="Itens2"></p:tab>
+            <p:tab title="Itens3"></p:tab>
+    </p:tabView><p:tabView scrollable="true">
+        <p:tab title="Tab 1">Tab 1 Content</p:tab>
+        <p:tab title="Tab 2">Tab 2 Content</p:tab>
+        <p:tab title="Tab 3">Tab 3 Content</p:tab>
+        <p:tab title="Tab 4">Tab 4 Content</p:tab>
+        <p:tab title="Tab 5">Tab 5 Content</p:tab>
+        <p:tab title="Tab 6">Tab 6 Content</p:tab>
+        <p:tab title="Tab 7">Tab 7 Content</p:tab>
+        <p:tab title="Tab 8">Tab 8 Content</p:tab>
+        <p:tab title="Tab 9">Tab 9 Content</p:tab>
+        <p:tab title="Tab 10">Tab 10 Content</p:tab>
+        <p:tab title="Tab 11">Tab 11 Content</p:tab>
+        <p:tab title="Tab 12">Tab 12 Content</p:tab>
+        <p:tab title="Tab 13">Tab 13 Content</p:tab>
+        <p:tab title="Tab 14">Tab 14 Content</p:tab>
+        <p:tab title="Tab 15">Tab 15 Content</p:tab>
+        <p:tab title="Tab 16">Tab 16 Content</p:tab>
+        <p:tab title="Tab 17">Tab 17 Content</p:tab>
+        <p:tab title="Tab 18">Tab 18 Content</p:tab>
+        <p:tab title="Tab 19">Tab 19 Content</p:tab>
+        <p:tab title="Tab 20">Tab 20 Content</p:tab>
+        <p:tab title="Tab 21">Tab 21 Content</p:tab>
+        <p:tab title="Tab 22">Tab 22 Content</p:tab>
+        <p:tab title="Tab 23">Tab 23 Content</p:tab>
+        <p:tab title="Tab 24">Tab 24 Content</p:tab>
+        <p:tab title="Tab 25">Tab 25 Content</p:tab>                
+    </p:tabView>
+ 
         
-          <p:tabView id="tabView">
-
-            <p:tab id="tab1" title="Tab one ">
-                <p:commandButton value="Import" icon="ui-icon-arrowrefresh-1-w"
-                    update=":form">
-                    <p:confirm header="Confirmation" message="Are you sure?" />
-                </p:commandButton>
-            </p:tab>
-
-            <p:tab id="tab2" title="Tab two">
-                <p:commandButton value="Import" icon="ui-icon-arrowrefresh-1-w"
-                    update=":form">
-                    <p:confirm header="Confirmation" message="Are you sure?" />
-                </p:commandButton>
-            </p:tab>
-
-
-        </p:tabView>     
-  
-    </h:form>
-
-    </body>
-</html>
+</ui:composition>

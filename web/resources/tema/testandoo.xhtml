@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+        xmlns:f="http://java.sun.com/jsf/core"
+        xmlns:p="http://primefaces.org/ui">
+ 
+<h:head>
+	<title>${pageTitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<h:outputStylesheet name="css/default.css" />
+</h:head>
+ 
+<h:body>
+	<div id="container">
+ 
+		<div id="header" class="header">
+			<ui:include src="header.xhtml" />
+		</div>
+ 
+		<div id="menu" class="menu">
+			<ui:include src="menu.xhtml" />
+		</div>
+ 
+		<div id="contentMenu" class="contentMenu">
+			<ui:insert name="contentMenu">
+				<p:layoutUnit position="west" size="220">  
+                    <ui:insert name="menu">
+                        <h:form>
+                           
+                            <p:menu style="width: 200px ; height:300px" >
+                                <p:submenu label="APRESENTAÇÃO">
+                                    <p:menuitem value="SECRETARIA" action="resources/tema/secretaria.xhtml"/>
+                                    <p:menuitem value="GESTÃO ESCOLAR"  />   
+                                    <p:menuitem value="INFORMATIVO EDUCACIONAL" />
+                                    <p:menuitem value="CENSOR ESCOLAR"  /> 
+                                    <p:menuitem value="CALENDÁRIO ESCOLAR"  />   
+                                     <p:menuitem value="MAPA ESTRATÉGICO 2017"  />   
+                                </p:submenu>
+                            </p:menu>
+                       
+                        </h:form>
+                    </ui:insert>
+                </p:layoutUnit> 
+			</ui:insert>
+		</div>
+            
+            
+            <div id="content" class="content">
+			
+               
+                <ui:insert name="content">
+                    sdfsdfsdfsfdsfdfdfçççççç
+                    
+                </ui:insert>
+                
+                    
+		</div>
+            
+ 
+		<div id="footer" class="footer">
+			<ui:include src="footer.xhtml" />
+		</div>
+ 
+	</div>
+</h:body>
+ 
+</html>

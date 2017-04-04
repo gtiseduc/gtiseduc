@@ -1,14 +1,230 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!--
-To change this template, choose Tools | Templates
-and open the template in the editor.
--->
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <title>TODO supply a title</title>
-    </head>
-    <body>
-        <div>TODO write content</div>
-    </body>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+        xmlns:f="http://java.sun.com/jsf/core"
+        xmlns:p="http://primefaces.org/ui"
+        >
+ 
+<h:head>
+	<title>${pageTitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<h:outputStylesheet name="css/default.css" />
+</h:head>
+ 
+<h:body>
+	<div id="container">
+ 
+		<div id="header" class="header">
+			<ui:include src="header.xhtml" />
+		</div>
+ 
+		<div id="menu" class="menu">
+			<ui:include src="menu.xhtml" />
+		</div>
+ 
+		<div id="contentMenu" class="contentMenu">
+			<ui:insert name="contentMenu">
+				<p:layoutUnit position="west" size="220">  
+                    <ui:insert name="menu">
+                        <h:form>
+                           
+                            <p:menu style="width: 200px ; height:300px" >
+                                <p:submenu label="APRESENTAÇÃO">
+                                    <p:menuitem value="SECRETARIA" action="resources/tema/secretaria.xhtml"/>
+                                    <p:menuitem value="GESTÃO ESCOLAR"  />   
+                                    <p:menuitem value="INFORMATIVO EDUCACIONAL" />
+                                    <p:menuitem value="CENSOR ESCOLAR"  /> 
+                                    <p:menuitem value="CALENDÁRIO ESCOLAR"  />   
+                                     <p:menuitem value="MAPA ESTRATÉGICO 2017"  />   
+                                </p:submenu>
+                            </p:menu>
+                       
+                        </h:form>
+                    </ui:insert>
+                </p:layoutUnit> 
+			</ui:insert>
+		</div>
+            
+            
+            <div id="content" class="content">
+			
+               
+                <ui:insert name="content">
+                    
+                     <p:tabView>
+                <p:tab title="DADOS PESSOAIS">
+                    
+                    <p:outputLabel value="Matricula:"></p:outputLabel>
+                    <p:inputText ></p:inputText>
+                    <br></br>
+                    <br></br>
+                    
+                    <p:outputLabel value="Nome:"></p:outputLabel>
+                    <p:inputText ></p:inputText>
+                      
+                      <br></br>
+                      <br></br>
+                     <p:outputLabel value="Data Nascimento:"></p:outputLabel>
+                     <p:calendar></p:calendar>
+                        <p:outputLabel value="dd/mm/aaaa"></p:outputLabel>              
+       <br></br>
+                      <br></br>
+                 <p:outputLabel value="Nacionalidade do Aluno:">
+                     
+                 </p:outputLabel>
+                 
+                 <p:selectOneRadio id="console" value="">
+                 <f:selectItem itemLabel="Brasileira" itemValue="Brasileira" />
+                 <f:selectItem itemLabel="Brasileira Nascido no Exterior" itemValue="Brasileira Nascido no Exterior" />
+                 <f:selectItem itemLabel="Naturalizado" itemValue="Naturalizado" />
+                 <f:selectItem itemLabel="Extrangeira" itemValue="Extrangeira" />
+                 </p:selectOneRadio>
+              <p:outputLabel value="UF de NAscimento:"> </p:outputLabel> 
+            
+              <p:selectOneMenu id="uf" value="" style="width:125px">
+            <f:selectItem itemLabel="Select One" itemValue="" />
+            <f:selectItem itemLabel="Xbox One" itemValue="Xbox One" />
+            <f:selectItem itemLabel="PS4" itemValue="PS4" />
+            <f:selectItem itemLabel="Wii U" itemValue="Wii U" />
+        </p:selectOneMenu>
+              
+                     <br></br>
+                      <br></br>  
+            <p:outputLabel value="Estado de Civil"> </p:outputLabel> 
+            
+              <p:selectOneMenu id="ec" value="" style="width:125px">
+            <f:selectItem itemLabel="Select One" itemValue="" />
+            <f:selectItem itemLabel="Xbox One" itemValue="Xbox One" />
+            <f:selectItem itemLabel="PS4" itemValue="PS4" />
+            <f:selectItem itemLabel="Wii U" itemValue="Wii U" />
+        </p:selectOneMenu>    
+            
+               <br></br>
+                      <br></br> 
+               <p:outputLabel value="Aluno com deficiência,transtorno global do desenvolvimento ou altas habilidades/superdotação"> </p:outputLabel> 
+               <p:selectOneRadio id="acd" value="">
+                 <f:selectItem itemLabel="Sim" itemValue="Sim" />
+                 <f:selectItem itemLabel="Nao" itemValue="Não" />
+                
+                 </p:selectOneRadio>
+                <p:outputLabel value="Recomendações Médicas"> </p:outputLabel> 
+                <p:inputTextarea>
+                    
+                </p:inputTextarea>              
+                
+                </p:tab>
+                <p:tab title="ENDEREÇO">
+                    
+                </p:tab>
+                <p:tab title="DADOS FAMILIARES">
+                    
+                </p:tab>
+                 <p:tab title="DOCUMENTOS">
+                    
+                </p:tab>
+                 <p:tab title="DADOS ESCOLARES">
+                    
+                </p:tab>
+              </p:tabView>
+        
+
+                    
+                    
+                </ui:insert>
+                
+                    
+		</div>
+            
+ 
+		<div id="footer" class="footer">
+			<ui:include src="footer.xhtml" />
+		</div>
+ 
+	</div>
+</h:body>
+ 
 </html>
+ 
+    <!--
+    <ui:define name="content">
+            <p:tabView>
+                <p:tab title="DADOS PESSOAIS">
+                    
+                    <p:outputLabel value="Matricula:"></p:outputLabel>
+                    <p:inputText ></p:inputText>
+                    <br></br>
+                    <br></br>
+                    
+                    <p:outputLabel value="Nome:"></p:outputLabel>
+                    <p:inputText ></p:inputText>
+                      
+                      <br></br>
+                      <br></br>
+                     <p:outputLabel value="Data Nascimento:"></p:outputLabel>
+                     <p:calendar></p:calendar>
+                        <p:outputLabel value="dd/mm/aaaa"></p:outputLabel>              
+       <br></br>
+                      <br></br>
+                 <p:outputLabel value="Nacionalidade do Aluno:">
+                     
+                 </p:outputLabel>
+                 
+                 <p:selectOneRadio id="console" value="">
+                 <f:selectItem itemLabel="Brasileira" itemValue="Brasileira" />
+                 <f:selectItem itemLabel="Brasileira Nascido no Exterior" itemValue="Brasileira Nascido no Exterior" />
+                 <f:selectItem itemLabel="Naturalizado" itemValue="Naturalizado" />
+                 <f:selectItem itemLabel="Extrangeira" itemValue="Extrangeira" />
+                 </p:selectOneRadio>
+              <p:outputLabel value="UF de NAscimento:"> </p:outputLabel> 
+            
+              <p:selectOneMenu id="uf" value="" style="width:125px">
+            <f:selectItem itemLabel="Select One" itemValue="" />
+            <f:selectItem itemLabel="Xbox One" itemValue="Xbox One" />
+            <f:selectItem itemLabel="PS4" itemValue="PS4" />
+            <f:selectItem itemLabel="Wii U" itemValue="Wii U" />
+        </p:selectOneMenu>
+              
+                     <br></br>
+                      <br></br>  
+            <p:outputLabel value="Estado de Civil"> </p:outputLabel> 
+            
+              <p:selectOneMenu id="ec" value="" style="width:125px">
+            <f:selectItem itemLabel="Select One" itemValue="" />
+            <f:selectItem itemLabel="Xbox One" itemValue="Xbox One" />
+            <f:selectItem itemLabel="PS4" itemValue="PS4" />
+            <f:selectItem itemLabel="Wii U" itemValue="Wii U" />
+        </p:selectOneMenu>    
+            
+               <br></br>
+                      <br></br> 
+               <p:outputLabel value="Aluno com deficiência,transtorno global do desenvolvimento ou altas habilidades/superdotação"> </p:outputLabel> 
+               <p:selectOneRadio id="acd" value="">
+                 <f:selectItem itemLabel="Sim" itemValue="Sim" />
+                 <f:selectItem itemLabel="Nao" itemValue="Não" />
+                
+                 </p:selectOneRadio>
+                <p:outputLabel value="Recomendações Médicas"> </p:outputLabel> 
+                <p:inputTextarea>
+                    
+                </p:inputTextarea>              
+                
+                </p:tab>
+                <p:tab title="ENDEREÇO">
+                    
+                </p:tab>
+                <p:tab title="DADOS FAMILIARES">
+                    
+                </p:tab>
+                 <p:tab title="DOCUMENTOS">
+                    
+                </p:tab>
+                 <p:tab title="DADOS ESCOLARES">
+                    
+                </p:tab>
+              </p:tabView>
+        
+        
+    </ui:define>
+    -->
+   

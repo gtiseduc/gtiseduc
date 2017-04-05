@@ -203,16 +203,16 @@
 
 
                             </p:selectOneMenu>
-                            
-                             <p:outputLabel value="Celular" ></p:outputLabel>
+
+                            <p:outputLabel value="Celular" ></p:outputLabel>
                             <p:inputText ></p:inputText>
                         </h:panelGrid>
 
                         <h3 style="margin-top:0">Pai</h3>
                         <p:separator />
-                        
-                        
-                         <h:panelGrid columns="2"  style="width: 35%; margin-top: 2px " columnClasses="rotulo,campo" >                  
+
+
+                        <h:panelGrid columns="2"  style="width: 35%; margin-top: 2px " columnClasses="rotulo,campo" >                  
                             <p:outputLabel value="Nome:" ></p:outputLabel>
                             <p:inputText styleClass="txtNome" ></p:inputText>
                         </h:panelGrid>  
@@ -242,30 +242,86 @@
 
 
                             </p:selectOneMenu>
-                            
-                             <p:outputLabel value="Celular" ></p:outputLabel>
+
+                            <p:outputLabel value="Celular" ></p:outputLabel>
                             <p:inputText ></p:inputText>
-                        <h3 style="margin-top:0">Irmãos</h3>
+
+                        </h:panelGrid>
+
+
+                        <h3 style="margin-0">Irmãos</h3>
                         <p:separator />
-                         <p:selectOneRadio id="falecidoPai" value="">
+                        <h:panelGrid columns="2"  style="width: 40%; margin-top: 2px " columnClasses="rotulo" >    
+
+                            <p:outputLabel value="Quantidade" ></p:outputLabel>
+                            <p:inputText ></p:inputText>
+                            <p:outputLabel value="Possui Irmãos que Estudam nesta Escola" ></p:outputLabel>
+
+                            <p:selectOneRadio id="selectirmaos" value="">
                                 <f:selectItem itemLabel="Sim" itemValue="Sim" />
                                 <f:selectItem itemLabel="Nao" itemValue="Não" />
 
 
                             </p:selectOneRadio>
                         </h:panelGrid>
-
-
-                      
-                        
- 
                     </p:tab>
 
 
 
                     <p:tab title="DOCUMENTOS">
 
+                        <h3 style="margin-top:0">Certidão civil</h3>
+                        <p:separator />
+
+                        <h:panelGrid columns="4"  style="width: 85%; margin-top: 2px " columnClasses="rotulo" >    
+                            <p:outputLabel value="Modelo de Certidão" ></p:outputLabel>
+
+                            <p:selectOneRadio id="modeloCertidao" value="">
+                                <f:selectItem itemLabel="Modelo antigo" itemValue="Modelo antigo" />
+                                <f:selectItem itemLabel="Modelo Novo" itemValue="Modelo Novo" />
+                                <f:selectItem itemLabel="Não Declarado" itemValue="Não Declarado" />
+
+
+                            </p:selectOneRadio>
+                        </h:panelGrid>
+
+
+                        <h:panelGrid columns="3"  style="width: 66%; margin-top: 2px " columnClasses="rotulo" >    
+                            <p:outputLabel value="Tipo de Certidão" ></p:outputLabel>
+
+                            <p:selectOneRadio id="tipoCertidao" value="">
+                                <f:selectItem itemLabel="Nascimento" itemValue="Nascimento" />
+                                <f:selectItem itemLabel="Casamento" itemValue="Casamento" />
+
+
+
+                            </p:selectOneRadio>
+                        </h:panelGrid>
+
+                        <h:panelGrid columns="6"  style="width: 96%; margin-top: 2px " columnClasses="rotulo" >    
+
+                            <p:outputLabel value="Número" ></p:outputLabel>
+                            <p:inputText ></p:inputText>
+                            <p:outputLabel value="Folha" ></p:outputLabel>
+                            <p:inputText ></p:inputText>
+                            <p:outputLabel value="Livro" ></p:outputLabel>
+                            <p:inputText ></p:inputText>
+                        </h:panelGrid>
+
+                        <h:panelGrid columns="2"  style="width: 46%; margin-top: 2px " columnClasses="rotulo" >    
+                            <p:outputLabel value="Número da Matricula" ></p:outputLabel>
+                            <p:inputText ></p:inputText>  
+                        </h:panelGrid>
+                        <h3 style="margin-top:0">Registro Geral e Cpf</h3>
+                        <p:separator />
+
+
                     </p:tab>
+
+
+
+
+
                     <p:tab title="DADOS ESCOLARES">
 
                     </p:tab>

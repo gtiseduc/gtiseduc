@@ -1,76 +1,108 @@
 body {
-	background-color: #eeeeee;
-	font-size: 12px;
-	font-family: Verdana, "Verdana CE", Arial, "Arial CE", "Lucida Grande CE", lucida, "Helvetica CE", sans-serif;
-	color: #000000;
-	margin: 10px;
+    background-color: #eeeeee;
+    font-size: 12px;
+    font-family: Verdana, "Verdana CE", Arial, "Arial CE", "Lucida Grande CE", lucida, "Helvetica CE", sans-serif;
+    color: #000000;
+    margin: 10px;
 }
- 
+
 #container {
-        
-       
-	margin-left: 100px;
-	margin-right: 100px;
-	border-radius: 5px;
+
+
+    margin-left: 100px;
+    margin-right: 100px;
+    border-radius: 5px;
 }
 
 #alinharHelp{
     text-align:right;
     background-image:url("#{resource['img:iconInterrogacao.png']}");
 }
- 
+
 #alinharNome{
-  color: white;
-  margin: -15px 0px 0px 80px;
+    color: white;
+    margin: -15px 0px 0px 80px;
 }
 #header {
-    
-        font-family:Arial;
-        font-weight: bold;
-	height: 150px;
-	background-color: #036fab;
-	color: white;
-	padding: 5px;
-	margin: 0px 0px 5px 0px;
-        
+
+    font-family:Arial;
+    font-weight: bold;
+    height: 150px;
+    background-color: #036fab;
+    color: white;
+    padding: 5px;
+    margin: 0px 0px 5px 0px;
+
 }
- 
+
 #menu {
-   
-	height: 34px;
-	vertical-align: middle;
-	font-weight: bold;
-	margin: 5px 5px;
+
+    height: 34px;
+    vertical-align: middle;
+    font-weight: bold;
+    margin: 5px 5px;
 }
- 
+
+.rotulo{
+    border: 4px; 
+    padding: 10px;  
+}
+.campo{
+    padding: 4px;  
+    width:150px;
+    border: 0px;
+
+}
+
+.txtMatricula{
+  width:50%;   
+    
+}
+.txtNome{    
+    width:250%;
+    
+}
+.txtEndereco{    
+    width:130%;
+    
+}
+.txtBairro{    
+    width:70%;
+    
+}
+.txtEmail{    
+    width:70%;
+    
+}
+
 #contentMenu {
-        
-        float:left;
-         overflow:hidden;
-        min-width:90px;
-        padding: 5px;
-	margin: 5px 5px;
-	
-	min-height: 300px;
+
+    float:left;
+    overflow:hidden;
+    min-width:90px;
+    padding: 5px;
+    margin: 5px 5px;
+
+    min-height: 300px;
 }
 
 #content {
-    
-      overflow:hidden;
-      min-width:710px;
-       padding: 5px;
-	margin: 5px 5px;
-	/*border: 1px solid navy;*/
-	min-height: 325px;
+
+    overflow:hidden;
+    min-width:710px;
+    padding: 5px;
+    margin: 5px 5px;
+    /*border: 1px solid navy;*/
+    min-height: 325px;
 }
- 
+
 #footer {
     /*font-family:Arial;*/
     clear:both;
-        text-align:center;
-        height: 100px;
-	background-color: #036fab;
-	color: white;
-	padding: 5px;
-	margin: 0px 0px 0px 0px;
+    text-align:center;
+    height: 100px;
+    background-color: #036fab;
+    color: white;
+    padding: 5px;
+    margin: 0px 0px 0px 0px;
 }

@@ -1,41 +1,82 @@
 <ui:composition xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:h="http://java.sun.com/jsf/html"
-	xmlns:f="http://java.sun.com/jsf/core"
-	xmlns:ui="http://java.sun.com/jsf/facelets"
-        xmlns:p="http://primefaces.org/ui">
- 
-	
-    <p:tabView style="margin-top:20px">
-        <p:tab title="Itens1"></p:tab>
-        <p:tab title="Itens2"></p:tab>
-            <p:tab title="Itens3"></p:tab>
-    </p:tabView><p:tabView scrollable="true">
-        <p:tab title="Tab 1">Tab 1 Content</p:tab>
-        <p:tab title="Tab 2">Tab 2 Content</p:tab>
-        <p:tab title="Tab 3">Tab 3 Content</p:tab>
-        <p:tab title="Tab 4">Tab 4 Content</p:tab>
-        <p:tab title="Tab 5">Tab 5 Content</p:tab>
-        <p:tab title="Tab 6">Tab 6 Content</p:tab>
-        <p:tab title="Tab 7">Tab 7 Content</p:tab>
-        <p:tab title="Tab 8">Tab 8 Content</p:tab>
-        <p:tab title="Tab 9">Tab 9 Content</p:tab>
-        <p:tab title="Tab 10">Tab 10 Content</p:tab>
-        <p:tab title="Tab 11">Tab 11 Content</p:tab>
-        <p:tab title="Tab 12">Tab 12 Content</p:tab>
-        <p:tab title="Tab 13">Tab 13 Content</p:tab>
-        <p:tab title="Tab 14">Tab 14 Content</p:tab>
-        <p:tab title="Tab 15">Tab 15 Content</p:tab>
-        <p:tab title="Tab 16">Tab 16 Content</p:tab>
-        <p:tab title="Tab 17">Tab 17 Content</p:tab>
-        <p:tab title="Tab 18">Tab 18 Content</p:tab>
-        <p:tab title="Tab 19">Tab 19 Content</p:tab>
-        <p:tab title="Tab 20">Tab 20 Content</p:tab>
-        <p:tab title="Tab 21">Tab 21 Content</p:tab>
-        <p:tab title="Tab 22">Tab 22 Content</p:tab>
-        <p:tab title="Tab 23">Tab 23 Content</p:tab>
-        <p:tab title="Tab 24">Tab 24 Content</p:tab>
-        <p:tab title="Tab 25">Tab 25 Content</p:tab>                
-    </p:tabView>
- 
-        
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui">
+
+
+    <ui:define name="dadosAlunos">
+
+        <h:panelGrid columns="2" layout="grid" style="width: 37%; margin-top: 2px " columnClasses="rotulo,campo" >
+
+            <p:outputLabel value="Matricula:"></p:outputLabel>
+            <p:inputText styleClass="txtMatricula"></p:inputText>
+            <p:outputLabel value="Nome:" ></p:outputLabel>
+            <p:inputText styleClass="txtNome" ></p:inputText>
+        </h:panelGrid>
+
+
+
+        <h:panelGrid columns="3" layout="grid" style="width: 55%; margin-top: 2px " columnClasses="rotulo" > 
+
+            <p:outputLabel value="Data Nascimento:"></p:outputLabel>
+            <p:calendar></p:calendar>
+            <p:outputLabel value="dd/mm/aaaa"></p:outputLabel>              
+        </h:panelGrid>
+
+        <h:panelGrid columns="5" layout="grid" style="width: 85%; margin-top: 2px " columnClasses="rotulo" > 
+            <p:outputLabel value="Nacionalidade do Aluno:">
+
+            </p:outputLabel>
+
+            <p:selectOneRadio id="console" value="">
+                <f:selectItem itemLabel="Brasileira" itemValue="Brasileira" />
+                <f:selectItem itemLabel="Brasileira Nascido no Exterior" itemValue="Brasileira Nascido no Exterior" />
+                <f:selectItem itemLabel="Naturalizado" itemValue="Naturalizado" />
+                <f:selectItem itemLabel="Extrangeira" itemValue="Extrangeira" />
+            </p:selectOneRadio>
+        </h:panelGrid>
+        <h:panelGrid columns="2" layout="grid" style="width: 40%; margin-top: 2px " columnClasses="rotulo" > 
+
+            <p:outputLabel value="UF de NAscimento:"> </p:outputLabel> 
+
+            <p:selectOneMenu id="uf" value="" style="width:125px">
+                <f:selectItem itemLabel="Selecione um Item" itemValue="" />
+
+            </p:selectOneMenu>
+
+
+
+            <p:outputLabel value="Estado de Civil"> </p:outputLabel> 
+
+            <p:selectOneMenu id="ec" value="" style="width:125px">
+                <f:selectItem itemLabel="Selecione um Item" itemValue="" />
+                <f:selectItem itemLabel="Solteiro" itemValue="Solteiro" />
+                <f:selectItem itemLabel="Casado" itemValue="Casado" />
+                <f:selectItem itemLabel="Outros" itemValue="Outros" />
+            </p:selectOneMenu>    
+        </h:panelGrid>
+
+        <h:panelGrid columns="3" layout="grid" style="width: 85%; margin-top: 2px " columnClasses="rotulo" > 
+
+            <p:outputLabel value="Aluno com deficiência,transtorno global do desenvolvimento ou altas habilidades/superdotação"> </p:outputLabel> 
+
+            <p:selectOneRadio id="acd" value="">
+                <f:selectItem itemLabel="Sim" itemValue="Sim" />
+                <f:selectItem itemLabel="Nao" itemValue="Não" />
+
+            </p:selectOneRadio>
+
+        </h:panelGrid>
+
+        <h:panelGrid columns="2" layout="grid" style="width: 40%; margin-top: 2px " columnClasses="rotulo" > 
+
+            <p:outputLabel value="Recomendações Médicas"> </p:outputLabel> 
+            <p:inputTextarea>
+
+            </p:inputTextarea>              
+        </h:panelGrid>
+
+    </ui:define>
+
 </ui:composition>

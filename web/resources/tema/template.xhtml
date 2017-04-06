@@ -309,13 +309,93 @@
                         </h:panelGrid>
 
                         <h:panelGrid columns="2"  style="width: 46%; margin-top: 2px " columnClasses="rotulo" >    
+
                             <p:outputLabel value="Número da Matricula" ></p:outputLabel>
-                            <p:inputText ></p:inputText>  
+                            <p:inputText styleClass="numeroMatricula"></p:inputText>  
+
+
                         </h:panelGrid>
+
+                        <h:panelGrid columns="4"  style="width: 50%; margin-top: 2px " columnClasses="rotulo" >    
+                            <p:outputLabel value="UF"> </p:outputLabel> 
+
+                            <p:selectOneMenu id="ufDocumento" value="" >
+                                <f:selectItem itemLabel="Selecione..." itemValue="" />
+
+
+                            </p:selectOneMenu>
+                            <p:outputLabel value="Municipio"> </p:outputLabel> 
+
+                            <p:selectOneMenu id="Municipio" value="" >
+                                <f:selectItem itemLabel="Selecione..." itemValue="" />
+
+
+                            </p:selectOneMenu>
+
+                        </h:panelGrid>
+
+                        <h:panelGrid columns="5"  style="width: 80%; margin-top: 2px " columnClasses="rotulo" >    
+
+                            <p:outputLabel value="Data De Emissão:"></p:outputLabel>
+                            <p:calendar></p:calendar>
+                            <p:outputLabel value="dd/mm/aaaa"></p:outputLabel>
+
+                            <p:outputLabel value="Cartório"> </p:outputLabel> 
+
+                            <p:selectOneMenu id="cartorio" value="" >
+                                <f:selectItem itemLabel="Selecione..." itemValue="" />
+                            </p:selectOneMenu>
+
+
+                        </h:panelGrid>
+
+
+                        <h:panelGrid columns="6"  style="width: 100%; margin-top: 2px " columnClasses="rotulo" >    
+
+                            <p:outputLabel value="Identidade" ></p:outputLabel>
+                            <p:inputText ></p:inputText>  
+                            <p:outputLabel value="Complemento" ></p:outputLabel>
+                            <p:inputText ></p:inputText>
+                            <p:outputLabel value="Orgão Espedidor"> </p:outputLabel> 
+
+                            <p:selectOneMenu id="orgaoEspedidor" value="" >
+                                <f:selectItem itemLabel="Selecione..." itemValue="" />
+                            </p:selectOneMenu>
+
+
+                        </h:panelGrid>
+
                         <h3 style="margin-top:0">Registro Geral e Cpf</h3>
                         <p:separator />
+                        
+                        
+
+                  <h:panelGrid columns="5"  style="width: 80%; margin-top: 2px " columnClasses="rotulo" >    
+
+                      
+                       <p:outputLabel value="UF"> </p:outputLabel> 
+
+                            <p:selectOneMenu id="ufRegistroGeral" value="" >
+                                <f:selectItem itemLabel="Selecione..." itemValue="" />
+                            </p:selectOneMenu>
+                       
+                            <p:outputLabel value="Data De Expedição"></p:outputLabel>
+                            <p:calendar></p:calendar>
+                            <p:outputLabel value="dd/mm/aaaa"></p:outputLabel>
+
+                           
 
 
+                        </h:panelGrid>
+                        
+                          <h:panelGrid columns="2"  style="width: 30%; margin-top: 2px " columnClasses="rotulo" >    
+                          
+                              <p:outputLabel value="Cpf" ></p:outputLabel>
+                              <p:inputText ></p:inputText>  
+                         
+                          </h:panelGrid>
+                 
+                    
                     </p:tab>
 
 

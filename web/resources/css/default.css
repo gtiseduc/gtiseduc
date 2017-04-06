@@ -75,6 +75,10 @@ body {
     
 }
 
+.numeroMatricula{
+   width:120%; 
+}
+
 #contentMenu {
 
     float:left;

@@ -50,25 +50,35 @@
 
                 <p:tabView>
 
-                    
+
                     <p:tab title="DADOS ESCOLARES">
-                          
-                         <h:panelGrid columns="2"  style="width: 37%; margin-top: 2px " columnClasses="rotulo,campo" >
-                           <p:outputLabel value="Código"></p:outputLabel>
-                           <p:inputText ></p:inputText>
-                           
-                           <p:outputLabel value="CNPJ"></p:outputLabel>
-                           <p:inputText ></p:inputText>
-                           
+
+                        <h:panelGrid columns="2"  style="width: 37%; margin-top: 2px " columnClasses="rotulo,campo" >
+                            <p:outputLabel value="Código"></p:outputLabel>
+                            <p:inputText ></p:inputText>
+
+
                             <p:outputLabel value="Nome"></p:outputLabel>
-                           <p:inputText styleClass="txtNome"></p:inputText>
-                            </h:panelGrid>
+                            <p:inputText styleClass="txtNome"></p:inputText>
+
+                            <p:outputLabel value="Entidadde Mantedora"></p:outputLabel>
+                            <p:inputText ></p:inputText>
+
+                            <p:outputLabel value="Grupo"></p:outputLabel>
+
+                            <p:inputText ></p:inputText>
+
+                            <p:outputLabel value="Cadastro no Mec"></p:outputLabel>
+
+                            <p:inputText ></p:inputText>
+
+                        </h:panelGrid>
                     </p:tab>
-                    
-                     <p:tab title="ENDEREÇO">
-                       
-                         
-                         <h:panelGrid columns="2"  style="width: 70%; margin-top: 2px " columnClasses="rotulo" > 
+
+                    <p:tab title="ENDEREÇO">
+
+
+                        <h:panelGrid columns="2"  style="width: 70%; margin-top: 2px " columnClasses="rotulo" > 
 
                             <p:outputLabel value="Tipo"> </p:outputLabel> 
 
@@ -106,106 +116,86 @@
 
 
                     </p:tab>
-                    
-                    <p:tab title="DOCUMENTOS">
-                        
-                        
-                         
-                       
-                        <h:panelGrid columns="2"  style="width: 46%; margin-top: 2px " columnClasses="rotulo" >    
 
-                            <p:outputLabel value="Número da Matricula" ></p:outputLabel>
-                            <p:inputText styleClass="numeroMatricula"></p:inputText>  
+                    <p:tab title="LEIS E ATOS">
 
+                        <h:panelGrid columns="1"  style="width:30%; margin-top: 2px " columnClasses="rotulo" > 
+                            <p:outputLabel value="Autorização" ></p:outputLabel>
+                            <p:inputText styleClass="txtNome"></p:inputText>
 
                         </h:panelGrid>
-
-                        <h:panelGrid columns="4"  style="width: 50%; margin-top: 2px " columnClasses="rotulo" >    
-                            <p:outputLabel value="UF"> </p:outputLabel> 
-
-                            <p:selectOneMenu id="ufDocumento" value="" >
-                                <f:selectItem itemLabel="Selecione..." itemValue="" />
-
-
-                            </p:selectOneMenu>
-                            <p:outputLabel value="Municipio"> </p:outputLabel> 
-
-                            <p:selectOneMenu id="Municipio" value="" >
-                                <f:selectItem itemLabel="Selecione..." itemValue="" />
-
-
-                            </p:selectOneMenu>
-
+                        <h:panelGrid columns="1"  style="width: 30%; margin-top: 2px " columnClasses="rotulo" > 
+                            <p:outputLabel value="Reconhecimento" ></p:outputLabel>
+                            <p:inputText styleClass="txtNome"></p:inputText>
                         </h:panelGrid>
+                        <h:panelGrid columns="2"  style="width: 40%; margin-top: 2px " columnClasses="rotulo" > 
 
-                        <h:panelGrid columns="5"  style="width: 80%; margin-top: 2px " columnClasses="rotulo" >    
+                            <p:outputLabel value="Cnpj" ></p:outputLabel>
 
-                            <p:outputLabel value="Data De Emissão:"></p:outputLabel>
-                            <p:calendar></p:calendar>
-                            <p:outputLabel value="dd/mm/aaaa"></p:outputLabel>
-
-                          
-
-                        </h:panelGrid>
-
-
-                        <h:panelGrid columns="6"  style="width: 100%; margin-top: 2px " columnClasses="rotulo" >    
-
-                            <p:outputLabel value="Identidade" ></p:outputLabel>
-                            <p:inputText ></p:inputText>  
-                            <p:outputLabel value="Complemento" ></p:outputLabel>
+                            <p:outputLabel value="Inscrição Municipal" ></p:outputLabel>
                             <p:inputText ></p:inputText>
-                            <p:outputLabel value="Orgão Espedidor"> </p:outputLabel> 
+                            <p:inputText ></p:inputText>
 
-                            <p:selectOneMenu id="orgaoEspedidor" value="" >
-                                <f:selectItem itemLabel="Selecione..." itemValue="" />
-                            </p:selectOneMenu>
+                            <p:outputLabel value="NRE" ></p:outputLabel>
+                            <p:outputLabel value="Destrito" ></p:outputLabel>
+                            <p:inputText ></p:inputText>
 
-
+                            <p:inputText ></p:inputText>
                         </h:panelGrid>
+                    </p:tab>
 
-                        <h3 style="margin-top:0">Registro Geral e Cpf</h3>
+                    <p:tab title="SÉRIES/TURNO">
+
+                        <h3 style="margin-top:0">Informe as séries da sua Escola</h3>
                         <p:separator />
 
 
 
-                        <h:panelGrid columns="5"  style="width: 80%; margin-top: 2px " columnClasses="rotulo" >    
 
 
-                            <p:outputLabel value="UF"> </p:outputLabel> 
+                        <p:selectManyCheckbox id="basic" style="padding:2px" layout="responsive" columns="4">
+                            <f:selectItem itemLabel="Infantil I" itemValue="Infantil I" />
+                            <f:selectItem itemLabel="Infantil II" itemValue="Infantil II" />
+                            <f:selectItem itemLabel="Infantil III" itemValue="Infantil III" />
+                            <f:selectItem itemLabel="1º Ano" itemValue="1º Ano" />
+                            <f:selectItem itemLabel="2º Ano" itemValue="2º Ano" />
+                            <f:selectItem itemLabel="3º Ano" itemValue="3º Ano" />
+                            <f:selectItem itemLabel="4º Ano" itemValue="4º Ano" />
+                            <f:selectItem itemLabel="5º Ano" itemValue="5º Ano" />
+                            <f:selectItem itemLabel="6º Ano" itemValue="6º Ano" />
+                            <f:selectItem itemLabel="7º Ano" itemValue="7º Ano" />
+                            <f:selectItem itemLabel="8º Ano" itemValue="8º Ano" />
+                            <f:selectItem itemLabel="9º Ano" itemValue="9º Ano" />
+                            <f:selectItem itemLabel="Fase I" itemValue="Fase I" />
+                            <f:selectItem itemLabel="Fase II" itemValue="Fase II" />
+                            <f:selectItem itemLabel="Fase III" itemValue="Fase III" />
+                            <f:selectItem itemLabel="Fase IV" itemValue="Fase IV" />
+                            <f:selectItem itemLabel="EJA" itemValue="EJA" />
 
-                            <p:selectOneMenu id="ufRegistroGeral" value="" >
-                                <f:selectItem itemLabel="Selecione..." itemValue="" />
-                            </p:selectOneMenu>
-
-                            <p:outputLabel value="Data De Expedição"></p:outputLabel>
-                            <p:calendar></p:calendar>
-                            <p:outputLabel value="dd/mm/aaaa"></p:outputLabel>
+                        </p:selectManyCheckbox>
 
 
 
 
-                        </h:panelGrid>
+                        <h3 style="margin-top:0">Informe os turnos </h3>
+                        <p:separator />
 
-                        <h:panelGrid columns="2"  style="width: 30%; margin-top: 2px " columnClasses="rotulo" >    
 
-                            <p:outputLabel value="Cpf" ></p:outputLabel>
-                            <p:inputText ></p:inputText>  
-
-                        </h:panelGrid>
+                      <p:selectManyCheckbox id="turno" style="padding:2px" >
+                            <f:selectItem itemLabel="Manhã" itemValue="manha" />
+                            <f:selectItem itemLabel="Tarde" itemValue="Tarde" />
+                            <f:selectItem itemLabel="Noite" itemValue="Noite" />
+                            <f:selectItem itemLabel="Integral" itemValue="Integral" />
+                           
+                        </p:selectManyCheckbox>
 
 
                     </p:tab>
 
                 </p:tabView>
-                
-                
+
+
                 <ui:insert name="content">
-
-
-
-
-
 
                 </ui:insert>
 
@@ -214,10 +204,14 @@
 
 
             <div id="footer" class="footer">
+
                 <ui:include src="footer.xhtml" />
+
             </div>
 
         </div>
+
+
     </h:body>
 
 </html>

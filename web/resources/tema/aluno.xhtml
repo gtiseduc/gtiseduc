@@ -1,230 +1,472 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:ui="http://java.sun.com/jsf/facelets"
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:h="http://java.sun.com/jsf/html"
-        xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:f="http://java.sun.com/jsf/core"
+        xmlns:ui="http://java.sun.com/jsf/facelets"
         xmlns:p="http://primefaces.org/ui"
-        >
+        template="resources/tema/template.xhtml">
  
-<h:head>
-	<title>${pageTitle}</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<h:outputStylesheet name="css/default.css" />
-</h:head>
- 
-<h:body>
-	<div id="container">
- 
-		<div id="header" class="header">
-			<ui:include src="header.xhtml" />
-		</div>
- 
-		<div id="menu" class="menu">
-			<ui:include src="menu.xhtml" />
-		</div>
- 
-		<div id="contentMenu" class="contentMenu">
-			<ui:insert name="contentMenu">
-				<p:layoutUnit position="west" size="220">  
-                    <ui:insert name="menu">
-                        <h:form>
-                           
-                            <p:menu style="width: 200px ; height:300px" >
-                                <p:submenu label="APRESENTAÇÃO">
-                                    <p:menuitem value="SECRETARIA" action="resources/tema/secretaria.xhtml"/>
-                                    <p:menuitem value="GESTÃO ESCOLAR"  />   
-                                    <p:menuitem value="INFORMATIVO EDUCACIONAL" />
-                                    <p:menuitem value="CENSOR ESCOLAR"  /> 
-                                    <p:menuitem value="CALENDÁRIO ESCOLAR"  />   
-                                     <p:menuitem value="MAPA ESTRATÉGICO 2017"  />   
-                                </p:submenu>
-                            </p:menu>
-                       
-                        </h:form>
-                    </ui:insert>
-                </p:layoutUnit> 
-			</ui:insert>
-		</div>
-            
-            
-            <div id="content" class="content">
-			
-               
-                <ui:insert name="content">
-                    
-                     <p:tabView>
-                <p:tab title="DADOS PESSOAIS">
-                    
-                    <p:outputLabel value="Matricula:"></p:outputLabel>
-                    <p:inputText ></p:inputText>
-                    <br></br>
-                    <br></br>
-                    
-                    <p:outputLabel value="Nome:"></p:outputLabel>
-                    <p:inputText ></p:inputText>
-                      
-                      <br></br>
-                      <br></br>
-                     <p:outputLabel value="Data Nascimento:"></p:outputLabel>
-                     <p:calendar></p:calendar>
-                        <p:outputLabel value="dd/mm/aaaa"></p:outputLabel>              
-       <br></br>
-                      <br></br>
-                 <p:outputLabel value="Nacionalidade do Aluno:">
-                     
-                 </p:outputLabel>
-                 
-                 <p:selectOneRadio id="console" value="">
-                 <f:selectItem itemLabel="Brasileira" itemValue="Brasileira" />
-                 <f:selectItem itemLabel="Brasileira Nascido no Exterior" itemValue="Brasileira Nascido no Exterior" />
-                 <f:selectItem itemLabel="Naturalizado" itemValue="Naturalizado" />
-                 <f:selectItem itemLabel="Extrangeira" itemValue="Extrangeira" />
-                 </p:selectOneRadio>
-              <p:outputLabel value="UF de NAscimento:"> </p:outputLabel> 
-            
-              <p:selectOneMenu id="uf" value="" style="width:125px">
-            <f:selectItem itemLabel="Select One" itemValue="" />
-            <f:selectItem itemLabel="Xbox One" itemValue="Xbox One" />
-            <f:selectItem itemLabel="PS4" itemValue="PS4" />
-            <f:selectItem itemLabel="Wii U" itemValue="Wii U" />
-        </p:selectOneMenu>
-              
-                     <br></br>
-                      <br></br>  
-            <p:outputLabel value="Estado de Civil"> </p:outputLabel> 
-            
-              <p:selectOneMenu id="ec" value="" style="width:125px">
-            <f:selectItem itemLabel="Select One" itemValue="" />
-            <f:selectItem itemLabel="Xbox One" itemValue="Xbox One" />
-            <f:selectItem itemLabel="PS4" itemValue="PS4" />
-            <f:selectItem itemLabel="Wii U" itemValue="Wii U" />
-        </p:selectOneMenu>    
-            
-               <br></br>
-                      <br></br> 
-               <p:outputLabel value="Aluno com deficiência,transtorno global do desenvolvimento ou altas habilidades/superdotação"> </p:outputLabel> 
-               <p:selectOneRadio id="acd" value="">
-                 <f:selectItem itemLabel="Sim" itemValue="Sim" />
-                 <f:selectItem itemLabel="Nao" itemValue="Não" />
-                
-                 </p:selectOneRadio>
-                <p:outputLabel value="Recomendações Médicas"> </p:outputLabel> 
-                <p:inputTextarea>
-                    
-                </p:inputTextarea>              
-                
-                </p:tab>
-                <p:tab title="ENDEREÇO">
-                    
-                </p:tab>
-                <p:tab title="DADOS FAMILIARES">
-                    
-                </p:tab>
-                 <p:tab title="DOCUMENTOS">
-                    
-                </p:tab>
-                 <p:tab title="DADOS ESCOLARES">
-                    
-                </p:tab>
-              </p:tabView>
-        
+	
+      <p:tabView>
 
-                    
-                    
-                </ui:insert>
-                
-                    
-		</div>
-            
- 
-		<div id="footer" class="footer">
-			<ui:include src="footer.xhtml" />
-		</div>
- 
-	</div>
-</h:body>
- 
-</html>
- 
-    <!--
-    <ui:define name="content">
-            <p:tabView>
-                <p:tab title="DADOS PESSOAIS">
-                    
-                    <p:outputLabel value="Matricula:"></p:outputLabel>
-                    <p:inputText ></p:inputText>
-                    <br></br>
-                    <br></br>
-                    
-                    <p:outputLabel value="Nome:"></p:outputLabel>
-                    <p:inputText ></p:inputText>
-                      
-                      <br></br>
-                      <br></br>
-                     <p:outputLabel value="Data Nascimento:"></p:outputLabel>
-                     <p:calendar></p:calendar>
-                        <p:outputLabel value="dd/mm/aaaa"></p:outputLabel>              
-       <br></br>
-                      <br></br>
-                 <p:outputLabel value="Nacionalidade do Aluno:">
-                     
-                 </p:outputLabel>
-                 
-                 <p:selectOneRadio id="console" value="">
-                 <f:selectItem itemLabel="Brasileira" itemValue="Brasileira" />
-                 <f:selectItem itemLabel="Brasileira Nascido no Exterior" itemValue="Brasileira Nascido no Exterior" />
-                 <f:selectItem itemLabel="Naturalizado" itemValue="Naturalizado" />
-                 <f:selectItem itemLabel="Extrangeira" itemValue="Extrangeira" />
-                 </p:selectOneRadio>
-              <p:outputLabel value="UF de NAscimento:"> </p:outputLabel> 
-            
-              <p:selectOneMenu id="uf" value="" style="width:125px">
-            <f:selectItem itemLabel="Select One" itemValue="" />
-            <f:selectItem itemLabel="Xbox One" itemValue="Xbox One" />
-            <f:selectItem itemLabel="PS4" itemValue="PS4" />
-            <f:selectItem itemLabel="Wii U" itemValue="Wii U" />
-        </p:selectOneMenu>
-              
-                     <br></br>
-                      <br></br>  
-            <p:outputLabel value="Estado de Civil"> </p:outputLabel> 
-            
-              <p:selectOneMenu id="ec" value="" style="width:125px">
-            <f:selectItem itemLabel="Select One" itemValue="" />
-            <f:selectItem itemLabel="Xbox One" itemValue="Xbox One" />
-            <f:selectItem itemLabel="PS4" itemValue="PS4" />
-            <f:selectItem itemLabel="Wii U" itemValue="Wii U" />
-        </p:selectOneMenu>    
-            
-               <br></br>
-                      <br></br> 
-               <p:outputLabel value="Aluno com deficiência,transtorno global do desenvolvimento ou altas habilidades/superdotação"> </p:outputLabel> 
-               <p:selectOneRadio id="acd" value="">
-                 <f:selectItem itemLabel="Sim" itemValue="Sim" />
-                 <f:selectItem itemLabel="Nao" itemValue="Não" />
-                
-                 </p:selectOneRadio>
-                <p:outputLabel value="Recomendações Médicas"> </p:outputLabel> 
-                <p:inputTextarea>
-                    
-                </p:inputTextarea>              
-                
-                </p:tab>
-                <p:tab title="ENDEREÇO">
-                    
-                </p:tab>
-                <p:tab title="DADOS FAMILIARES">
-                    
-                </p:tab>
-                 <p:tab title="DOCUMENTOS">
-                    
-                </p:tab>
-                 <p:tab title="DADOS ESCOLARES">
-                    
-                </p:tab>
-              </p:tabView>
-        
-        
-    </ui:define>
-    -->
-   
+                    <p:tab title="DADOS PESSOAIS">
+
+
+                        <h:panelGrid columns="2"  style="width: 37%; margin-top: 2px " columnClasses="rotulo,campo" >
+
+                            <p:outputLabel value="Matricula:"></p:outputLabel>
+                            <p:inputText styleClass="txtMatricula"></p:inputText>
+                            <p:outputLabel value="Nome:" ></p:outputLabel>
+                            <p:inputText styleClass="txtNome" ></p:inputText>
+                        </h:panelGrid>
+
+
+
+                        <h:panelGrid columns="3"  style="width: 55%; margin-top: 2px " columnClasses="rotulo" > 
+
+                            <p:outputLabel value="Data Nascimento:"></p:outputLabel>
+                            <p:calendar></p:calendar>
+                            <p:outputLabel value="dd/mm/aaaa"></p:outputLabel>              
+                        </h:panelGrid>
+
+                        <h:panelGrid columns="5"  style="width: 85%; margin-top: 2px " columnClasses="rotulo" > 
+                            <p:outputLabel value="Nacionalidade do Aluno:">
+
+                            </p:outputLabel>
+
+                            <p:selectOneRadio id="console" value="">
+                                <f:selectItem itemLabel="Brasileira" itemValue="Brasileira" />
+                                <f:selectItem itemLabel="Brasileira Nascido no Exterior" itemValue="Brasileira Nascido no Exterior" />
+                                <f:selectItem itemLabel="Naturalizado" itemValue="Naturalizado" />
+                                <f:selectItem itemLabel="Extrangeira" itemValue="Extrangeira" />
+                            </p:selectOneRadio>
+                        </h:panelGrid>
+                        <h:panelGrid columns="2"  style="width: 40%; margin-top: 2px " columnClasses="rotulo" > 
+
+                            <p:outputLabel value="UF de NAscimento:"> </p:outputLabel> 
+
+                            <p:selectOneMenu id="uf" value="" style="width:125px">
+                                <f:selectItem itemLabel="Selecione um Item" itemValue="" />
+
+                            </p:selectOneMenu>
+
+
+
+                            <p:outputLabel value="Estado de Civil"> </p:outputLabel> 
+
+                            <p:selectOneMenu id="ec" value="" style="width:125px">
+                                <f:selectItem itemLabel="Selecione um Item" itemValue="" />
+                                <f:selectItem itemLabel="Solteiro" itemValue="Solteiro" />
+                                <f:selectItem itemLabel="Casado" itemValue="Casado" />
+                                <f:selectItem itemLabel="Outros" itemValue="Outros" />
+                            </p:selectOneMenu>    
+                        </h:panelGrid>
+
+                        <h:panelGrid columns="3"  style="width: 85%; margin-top: 2px " columnClasses="rotulo" > 
+
+                            <p:outputLabel value="Aluno com deficiência,transtorno global do desenvolvimento ou altas habilidades/superdotação"> </p:outputLabel> 
+
+                            <p:selectOneRadio id="acd" value="">
+                                <f:selectItem itemLabel="Sim" itemValue="Sim" />
+                                <f:selectItem itemLabel="Nao" itemValue="Não" />
+
+                            </p:selectOneRadio>
+
+                        </h:panelGrid>
+
+                        <h:panelGrid columns="2"  style="width: 40%; margin-top: 2px " columnClasses="rotulo" > 
+
+                            <p:outputLabel value="Recomendações Médicas"> </p:outputLabel> 
+                            <p:inputTextarea>
+
+                            </p:inputTextarea>              
+                        </h:panelGrid>
+
+                    </p:tab>
+
+                    <p:tab title="ENDEREÇO">
+
+                        <h:panelGrid columns="2"  style="width: 70%; margin-top: 2px " columnClasses="rotulo" > 
+
+                            <p:outputLabel value="Tipo"> </p:outputLabel> 
+
+                            <p:selectOneMenu id="tipo" value="" >
+                                <f:selectItem itemLabel="Selecione..." itemValue="" />
+                                <f:selectItem itemLabel="URBANA" itemValue="URBANA" />
+                                <f:selectItem itemLabel="RURAL" itemValue="RURAL" />
+
+
+
+
+                            </p:selectOneMenu>
+                            <p:outputLabel value="Endereço" ></p:outputLabel>
+                            <p:inputText styleClass="txtEndereco"></p:inputText>
+                            <p:outputLabel value="Bairro" ></p:outputLabel>
+                            <p:inputText styleClass="txtBairro"></p:inputText>
+
+
+                            <p:outputLabel value="UF"> </p:outputLabel> 
+
+                            <p:selectOneMenu id="ufEndereco" value="" >
+                                <f:selectItem itemLabel="Selecione..." itemValue="" />
+
+
+                            </p:selectOneMenu>
+
+                            <p:outputLabel value="Cep" ></p:outputLabel>
+                            <p:inputText ></p:inputText>
+                            <p:outputLabel value="Telefone" ></p:outputLabel>
+                            <p:inputText ></p:inputText>
+                            <p:outputLabel value="Tel.Contato" ></p:outputLabel>
+                            <p:inputText ></p:inputText>
+                            <p:outputLabel value="Email" ></p:outputLabel>
+                            <p:inputText styleClass="txtEmail"></p:inputText>
+
+                        </h:panelGrid>
+
+                    </p:tab>
+
+
+                    <p:tab title="DADOS FAMILIARES">
+
+                        <h3 style="margin-top:0">Mãe</h3>
+                        <p:separator />
+
+                        <h:panelGrid columns="2"  style="width: 35%; margin-top: 2px " columnClasses="rotulo,campo" >                  
+                            <p:outputLabel value="Nome:" ></p:outputLabel>
+                            <p:inputText styleClass="txtNome" ></p:inputText>
+                        </h:panelGrid>  
+
+                        <h:panelGrid columns="6"  style="width: 68%; margin-top: 2px " columnClasses="rotulo" > 
+
+                            <p:outputLabel value="Data Nascimento:"></p:outputLabel>
+                            <p:calendar></p:calendar>
+                            <p:outputLabel value="dd/mm/aaaa"></p:outputLabel>
+                            <p:outputLabel value="Falecido">
+
+                            </p:outputLabel>
+
+
+                            <p:selectOneRadio id="selectFalecido" value="">
+                                <f:selectItem itemLabel="Sim" itemValue="Sim" />
+                                <f:selectItem itemLabel="Nao" itemValue="Não" />
+
+
+                            </p:selectOneRadio>
+                        </h:panelGrid>
+                        <h:panelGrid columns="2"  style="width: 55%; margin-top: 2px " columnClasses="rotulo" > 
+                            <p:outputLabel value="Profissão"> </p:outputLabel> 
+
+                            <p:selectOneMenu id="profissao" value="" >
+                                <f:selectItem itemLabel="Selecione..." itemValue="" />
+
+
+                            </p:selectOneMenu>
+
+                            <p:outputLabel value="Celular" ></p:outputLabel>
+                            <p:inputText ></p:inputText>
+                        </h:panelGrid>
+
+                        <h3 style="margin-top:0">Pai</h3>
+                        <p:separator />
+
+
+                        <h:panelGrid columns="2"  style="width: 35%; margin-top: 2px " columnClasses="rotulo,campo" >                  
+                            <p:outputLabel value="Nome:" ></p:outputLabel>
+                            <p:inputText styleClass="txtNome" ></p:inputText>
+                        </h:panelGrid>  
+
+                        <h:panelGrid columns="6"  style="width: 68%; margin-top: 2px " columnClasses="rotulo" > 
+
+                            <p:outputLabel value="Data Nascimento:"></p:outputLabel>
+                            <p:calendar></p:calendar>
+                            <p:outputLabel value="dd/mm/aaaa"></p:outputLabel>
+                            <p:outputLabel value="Falecido">
+
+                            </p:outputLabel>
+
+
+                            <p:selectOneRadio id="falecidoPai" value="">
+                                <f:selectItem itemLabel="Sim" itemValue="Sim" />
+                                <f:selectItem itemLabel="Nao" itemValue="Não" />
+
+
+                            </p:selectOneRadio>
+                        </h:panelGrid>
+                        <h:panelGrid columns="2"  style="width: 55%; margin-top: 2px " columnClasses="rotulo" > 
+                            <p:outputLabel value="Profissão"> </p:outputLabel> 
+
+                            <p:selectOneMenu id="profissaoPai" value="" >
+                                <f:selectItem itemLabel="Selecione..." itemValue="" />
+
+
+                            </p:selectOneMenu>
+
+                            <p:outputLabel value="Celular" ></p:outputLabel>
+                            <p:inputText ></p:inputText>
+
+                        </h:panelGrid>
+
+
+                        <h3 style="margin-0">Irmãos</h3>
+                        <p:separator />
+                        <h:panelGrid columns="2"  style="width: 40%; margin-top: 2px " columnClasses="rotulo" >    
+
+                            <p:outputLabel value="Quantidade" ></p:outputLabel>
+                            <p:inputText ></p:inputText>
+                            <p:outputLabel value="Possui Irmãos que Estudam nesta Escola" ></p:outputLabel>
+
+                            <p:selectOneRadio id="selectirmaos" value="">
+                                <f:selectItem itemLabel="Sim" itemValue="Sim" />
+                                <f:selectItem itemLabel="Nao" itemValue="Não" />
+
+
+                            </p:selectOneRadio>
+                        </h:panelGrid>
+                    </p:tab>
+
+
+
+                    <p:tab title="DOCUMENTOS">
+
+                        <h3 style="margin-top:0">Certidão civil</h3>
+                        <p:separator />
+
+                        <h:panelGrid columns="4"  style="width: 85%; margin-top: 2px " columnClasses="rotulo" >    
+                            <p:outputLabel value="Modelo de Certidão" ></p:outputLabel>
+
+                            <p:selectOneRadio id="modeloCertidao" value="">
+                                <f:selectItem itemLabel="Modelo antigo" itemValue="Modelo antigo" />
+                                <f:selectItem itemLabel="Modelo Novo" itemValue="Modelo Novo" />
+                                <f:selectItem itemLabel="Não Declarado" itemValue="Não Declarado" />
+
+
+                            </p:selectOneRadio>
+                        </h:panelGrid>
+
+
+                        <h:panelGrid columns="3"  style="width: 66%; margin-top: 2px " columnClasses="rotulo" >    
+                            <p:outputLabel value="Tipo de Certidão" ></p:outputLabel>
+
+                            <p:selectOneRadio id="tipoCertidao" value="">
+                                <f:selectItem itemLabel="Nascimento" itemValue="Nascimento" />
+                                <f:selectItem itemLabel="Casamento" itemValue="Casamento" />
+
+
+
+                            </p:selectOneRadio>
+                        </h:panelGrid>
+
+                        <h:panelGrid columns="6"  style="width: 96%; margin-top: 2px " columnClasses="rotulo" >    
+
+                            <p:outputLabel value="Número" ></p:outputLabel>
+                            <p:inputText ></p:inputText>
+                            <p:outputLabel value="Folha" ></p:outputLabel>
+                            <p:inputText ></p:inputText>
+                            <p:outputLabel value="Livro" ></p:outputLabel>
+                            <p:inputText ></p:inputText>
+                        </h:panelGrid>
+
+                        <h:panelGrid columns="2"  style="width: 46%; margin-top: 2px " columnClasses="rotulo" >    
+
+                            <p:outputLabel value="Número da Matricula" ></p:outputLabel>
+                            <p:inputText styleClass="numeroMatricula"></p:inputText>  
+
+
+                        </h:panelGrid>
+
+                        <h:panelGrid columns="4"  style="width: 50%; margin-top: 2px " columnClasses="rotulo" >    
+                            <p:outputLabel value="UF"> </p:outputLabel> 
+
+                            <p:selectOneMenu id="ufDocumento" value="" >
+                                <f:selectItem itemLabel="Selecione..." itemValue="" />
+
+
+                            </p:selectOneMenu>
+                            <p:outputLabel value="Municipio"> </p:outputLabel> 
+
+                            <p:selectOneMenu id="Municipio" value="" >
+                                <f:selectItem itemLabel="Selecione..." itemValue="" />
+
+
+                            </p:selectOneMenu>
+
+                        </h:panelGrid>
+
+                        <h:panelGrid columns="5"  style="width: 80%; margin-top: 2px " columnClasses="rotulo" >    
+
+                            <p:outputLabel value="Data De Emissão:"></p:outputLabel>
+                            <p:calendar></p:calendar>
+                            <p:outputLabel value="dd/mm/aaaa"></p:outputLabel>
+
+                            <p:outputLabel value="Cartório"> </p:outputLabel> 
+
+                            <p:selectOneMenu id="cartorio" value="" >
+                                <f:selectItem itemLabel="Selecione..." itemValue="" />
+                            </p:selectOneMenu>
+
+
+                        </h:panelGrid>
+
+
+                        <h:panelGrid columns="6"  style="width: 100%; margin-top: 2px " columnClasses="rotulo" >    
+
+                            <p:outputLabel value="Identidade" ></p:outputLabel>
+                            <p:inputText ></p:inputText>  
+                            <p:outputLabel value="Complemento" ></p:outputLabel>
+                            <p:inputText ></p:inputText>
+                            <p:outputLabel value="Orgão Espedidor"> </p:outputLabel> 
+
+                            <p:selectOneMenu id="orgaoEspedidor" value="" >
+                                <f:selectItem itemLabel="Selecione..." itemValue="" />
+                            </p:selectOneMenu>
+
+
+                        </h:panelGrid>
+
+                        <h3 style="margin-top:0">Registro Geral e Cpf</h3>
+                        <p:separator />
+
+
+
+                        <h:panelGrid columns="5"  style="width: 80%; margin-top: 2px " columnClasses="rotulo" >    
+
+
+                            <p:outputLabel value="UF"> </p:outputLabel> 
+
+                            <p:selectOneMenu id="ufRegistroGeral" value="" >
+                                <f:selectItem itemLabel="Selecione..." itemValue="" />
+                            </p:selectOneMenu>
+
+                            <p:outputLabel value="Data De Expedição"></p:outputLabel>
+                            <p:calendar></p:calendar>
+                            <p:outputLabel value="dd/mm/aaaa"></p:outputLabel>
+
+
+
+
+                        </h:panelGrid>
+
+                        <h:panelGrid columns="2"  style="width: 30%; margin-top: 2px " columnClasses="rotulo" >    
+
+                            <p:outputLabel value="Cpf" ></p:outputLabel>
+                            <p:inputText ></p:inputText>  
+
+                        </h:panelGrid>
+
+
+                    </p:tab>
+
+
+
+
+
+                    <p:tab title="DADOS ESCOLARES">
+
+                        <h3 style="margin-top:0">Composição de Ensino/Observação</h3>
+                        <p:separator />
+
+                        <h:panelGrid columns="2"  style="width: 30%; margin-top: 2px " columnClasses="rotulo" >    
+                            <p:outputLabel value="Turma" ></p:outputLabel>
+                            <p:inputText ></p:inputText>  
+
+                            <p:outputLabel value="Série"> </p:outputLabel> 
+
+                            <p:selectOneMenu id="serie" value="" >
+                                <f:selectItem itemLabel="Selecione..." itemValue="" />
+                            </p:selectOneMenu>
+
+                            <p:outputLabel value="Semestre"> </p:outputLabel> 
+
+                            <p:selectOneMenu id="semestre" value="" >
+                                <f:selectItem itemLabel="Selecione..." itemValue="" />
+                            </p:selectOneMenu>
+
+                            <p:outputLabel value="Turno"> </p:outputLabel> 
+
+                            <p:selectOneMenu id="turno" value="" >
+                                <f:selectItem itemLabel="Selecione..." itemValue="" />
+                                <f:selectItem itemLabel="Manhã" itemValue="Manha" />
+                                <f:selectItem itemLabel="Tarde" itemValue="Tarde" />
+                                <f:selectItem itemLabel="Noite" itemValue="Noite" />
+                                <f:selectItem itemLabel="Integral" itemValue="Integral" />
+
+                            </p:selectOneMenu>
+                            <p:outputLabel value="Observação"> </p:outputLabel> 
+                            <p:inputTextarea>
+
+                            </p:inputTextarea>
+
+                        </h:panelGrid>
+
+                        <h3 style="margin-top:0">Unidade de Ensino Atual</h3>
+                        <p:separator />
+
+                        <h:panelGrid columns="5"  style="width: 80%; margin-top: 2px " columnClasses="rotulo" > 
+
+                            <p:outputLabel value="Data Da Matricula"></p:outputLabel>
+                            <p:calendar></p:calendar>
+                            <p:outputLabel value="dd/mm/aaaa"></p:outputLabel>
+
+                            <p:outputLabel value="Tipo da Matricula"> </p:outputLabel> 
+
+                            <p:selectOneMenu id="tipoMatricula" value="" >
+                                <f:selectItem itemLabel="Selecione..." itemValue="" />
+                            </p:selectOneMenu>
+
+
+                        </h:panelGrid>
+
+
+                        <h:panelGrid columns="2"  style="width: 33%; margin-top: 2px " columnClasses="rotulo" > 
+                            <p:outputLabel value="Situação do Aluno"> </p:outputLabel> 
+                            <p:selectOneMenu id="situacaoAluno" value="" >
+                                <f:selectItem itemLabel="Selecione..." itemValue="" />
+                            </p:selectOneMenu>
+                        </h:panelGrid>     
+
+                        <h3 style="margin-top:0">Responsável</h3>
+                        <p:separator />
+
+                        <h:panelGrid columns="2"  style="width: 39%; margin-top: 2px " columnClasses="rotulo" > 
+                            <p:outputLabel value="Nome do responsavel"> </p:outputLabel> 
+                            <p:inputText styleClass="txtNome">
+
+                            </p:inputText>
+                            <p:outputLabel value="Celular"> </p:outputLabel> 
+                            <p:inputText>
+
+                            </p:inputText>
+
+                        </h:panelGrid>     
+
+                        <h:panelGrid columns="3"  style="width: 39%; margin-top: 2px " columnClasses="rotulo" > 
+
+                            <p:outputLabel value="Responsável Legal"> </p:outputLabel> 
+
+                            <p:selectOneRadio id="responsavel" value="">
+                                <f:selectItem itemLabel="Sim" itemValue="Sim" />
+                                <f:selectItem itemLabel="Nao" itemValue="Não" />
+
+                            </p:selectOneRadio>
+
+                        </h:panelGrid>  
+
+                        <h:panelGrid columns="4"  style="width: 39%; margin-top: 2px " columnClasses="rotulo" > 
+                            <p:outputLabel value="Endereço"> </p:outputLabel> 
+                            <p:inputText>
+
+                            </p:inputText>
+                            <p:outputLabel value="Número"> </p:outputLabel> 
+                            <p:inputText>
+
+                            </p:inputText>
+                        </h:panelGrid>
+
+                    </p:tab>
+
+                </p:tabView>
+
+       
+
+</ui:composition>

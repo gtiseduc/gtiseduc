@@ -48,6 +48,7 @@
 
             <div id="content" class="content">
 
+
                 <p:tabView>
 
 
@@ -73,10 +74,12 @@
                             <p:inputText ></p:inputText>
 
                         </h:panelGrid>
-                        
-                        <p:button value="CADASTRAR" icon="ui-icon-disk"></p:button>
-                         <p:button value="ALTERAR" icon="fa fa-fw fa-edit"></p:button>
-                          <p:button value="EXCLUIR" icon="fa fa-fw fa-remove" ></p:button>
+                        <h:panelGrid columns="3"  style="width: 42%; margin-top: 2px " columnClasses="rotulo,campo" > 
+
+                            <p:button value="CADASTRAR" ></p:button>
+                            <p:button value="ALTERAR" ></p:button>
+                            <p:button value="EXCLUIR"  ></p:button>
+                        </h:panelGrid>
                     </p:tab>
 
                     <p:tab title="ENDEREÇO">
@@ -109,6 +112,8 @@
 
                             </p:selectOneMenu>
 
+                            <p:outputLabel value="Cidade" ></p:outputLabel>
+                            <p:inputText ></p:inputText>
                             <p:outputLabel value="Cep" ></p:outputLabel>
                             <p:inputText ></p:inputText>
                             <p:outputLabel value="Telefone" ></p:outputLabel>
@@ -150,53 +155,121 @@
 
                     <p:tab title="SÉRIES/TURNO">
 
-                        <h3 style="margin-top:0">Informe as séries da sua Escola</h3>
-                        <p:separator />
-
-
-
-
-
-                        <p:selectManyCheckbox id="basic" style="padding:2px" layout="responsive" columns="4">
-                            <f:selectItem itemLabel="Infantil I" itemValue="Infantil I" />
-                            <f:selectItem itemLabel="Infantil II" itemValue="Infantil II" />
-                            <f:selectItem itemLabel="Infantil III" itemValue="Infantil III" />
-                            <f:selectItem itemLabel="1º Ano" itemValue="1º Ano" />
-                            <f:selectItem itemLabel="2º Ano" itemValue="2º Ano" />
-                            <f:selectItem itemLabel="3º Ano" itemValue="3º Ano" />
-                            <f:selectItem itemLabel="4º Ano" itemValue="4º Ano" />
-                            <f:selectItem itemLabel="5º Ano" itemValue="5º Ano" />
-                            <f:selectItem itemLabel="6º Ano" itemValue="6º Ano" />
-                            <f:selectItem itemLabel="7º Ano" itemValue="7º Ano" />
-                            <f:selectItem itemLabel="8º Ano" itemValue="8º Ano" />
-                            <f:selectItem itemLabel="9º Ano" itemValue="9º Ano" />
-                            <f:selectItem itemLabel="Fase I" itemValue="Fase I" />
-                            <f:selectItem itemLabel="Fase II" itemValue="Fase II" />
-                            <f:selectItem itemLabel="Fase III" itemValue="Fase III" />
-                            <f:selectItem itemLabel="Fase IV" itemValue="Fase IV" />
-                            <f:selectItem itemLabel="EJA" itemValue="EJA" />
-
-                        </p:selectManyCheckbox>
-
-
 
 
                         <h3 style="margin-top:0">Informe os turnos </h3>
                         <p:separator />
 
 
-                      <p:selectManyCheckbox id="turno" style="padding:2px" >
+                        <p:selectManyCheckbox id="turno" style="padding:2px" >
                             <f:selectItem itemLabel="Manhã" itemValue="manha" />
                             <f:selectItem itemLabel="Tarde" itemValue="Tarde" />
                             <f:selectItem itemLabel="Noite" itemValue="Noite" />
                             <f:selectItem itemLabel="Integral" itemValue="Integral" />
-                           
+
                         </p:selectManyCheckbox>
 
 
+
+
+
+
+                        <h3 style="margin-top:0">Informe as séries da sua Escola</h3>
+                        <p:separator />
+
+                        <h:panelGrid columns="4"  style="width:100%; margin-top: 2px " columnClasses="rotulo" > 
+                          
+                            <p:selectCheckboxMenu id="infantilI" value="#{checkboxView.selectedTurmas}"  label="Infantil I"
+                                                  filter="true" filterMatchMode="startsWith" panelStyle="width:250px">
+                                <f:selectItems value="#{checkboxView.turmas}" />
+                               
+                            </p:selectCheckboxMenu>
+
+                            <p:selectCheckboxMenu id="infantilII" value="#{checkboxView.selectedTurmas}" label="Infantil II"
+                                                  filter="true" filterMatchMode="startsWith" panelStyle="width:250px">
+                                <f:selectItems value="#{checkboxView.turmas}" />
+                            </p:selectCheckboxMenu>
+
+                            <p:selectCheckboxMenu id="infantilIII" value="#{checkboxView.selectedTurmas}"  label="Infantil III"
+                                                  filter="true" filterMatchMode="startsWith" panelStyle="width:250px">
+                                <f:selectItems value="#{checkboxView.turmas}" />
+                            </p:selectCheckboxMenu>
+
+
+                            <p:selectCheckboxMenu id="pAno" value="#{checkboxView.selectedTurmas}"  label="1º Ano"
+                                                  filter="true" filterMatchMode="startsWith" panelStyle="width:250px">
+                                <f:selectItems value="#{checkboxView.turmas}" />
+                            </p:selectCheckboxMenu>
+
+
+                            <p:selectCheckboxMenu id="sAno" value="#{checkboxView.selectedTurmas}" label="2º Ano"
+                                                  filter="true" filterMatchMode="startsWith" panelStyle="width:250px">
+                                <f:selectItems value="#{checkboxView.turmas}" />
+                            </p:selectCheckboxMenu>
+
+                            <p:selectCheckboxMenu id="tAno" value="#{checkboxView.selectedTurmas}" label="3º Ano"
+                                                  filter="true" filterMatchMode="startsWith" panelStyle="width:250px">
+                                <f:selectItems value="#{checkboxView.turmas}" />
+                            </p:selectCheckboxMenu>
+
+                            <p:selectCheckboxMenu id="qAno" value="#{checkboxView.selectedTurmas}" label="4º Ano"
+                                                  filter="true" filterMatchMode="startsWith" panelStyle="width:250px">
+                                <f:selectItems value="#{checkboxView.turmas}" />
+                            </p:selectCheckboxMenu>
+
+
+                            <p:selectCheckboxMenu id="quiAno" value="#{checkboxView.selectedTurmas}" label="5º Ano"
+                                                  filter="true" filterMatchMode="startsWith" panelStyle="width:250px">
+                                <f:selectItems value="#{checkboxView.turmas}" />
+                            </p:selectCheckboxMenu>
+
+
+                            <p:selectCheckboxMenu id="seAno" value="#{checkboxView.selectedTurmas}" label="6º Ano"
+                                                  filter="true" filterMatchMode="startsWith" panelStyle="width:250px">
+                                <f:selectItems value="#{checkboxView.turmas}" />
+                            </p:selectCheckboxMenu>
+
+                            <p:selectCheckboxMenu id="setAno" value="#{checkboxView.selectedTurmas}"  label="7º Ano"
+                                                  filter="true" filterMatchMode="startsWith" panelStyle="width:250px">
+                                <f:selectItems value="#{checkboxView.turmas}" />
+                            </p:selectCheckboxMenu>
+
+                            <p:selectCheckboxMenu id="oitAno" value="#{checkboxView.selectedTurmas}" label="8º Ano"
+                                                  filter="true" filterMatchMode="startsWith" panelStyle="width:250px">
+                                <f:selectItems value="#{checkboxView.turmas}" />
+                            </p:selectCheckboxMenu>
+
+
+                            <p:selectCheckboxMenu id="nAno" value="#{checkboxView.selectedTurmas}" label="9º Ano"
+                                                  filter="true" filterMatchMode="startsWith" panelStyle="width:250px">
+                                <f:selectItems value="#{checkboxView.turmas}" />
+                            </p:selectCheckboxMenu>
+
+                            <p:selectCheckboxMenu id="faseI" value="#{checkboxView.selectedTurmas}" label="Fase I"
+                                                  filter="true" filterMatchMode="startsWith" panelStyle="width:250px">
+                                <f:selectItems value="#{checkboxView.turmas}" />
+                            </p:selectCheckboxMenu>
+
+                            <p:selectCheckboxMenu id="faseII" value="#{checkboxView.selectedTurmas}" label="Fase II"
+                                                  filter="true" filterMatchMode="startsWith" panelStyle="width:250px">
+                                <f:selectItems value="#{checkboxView.turmas}" />
+                            </p:selectCheckboxMenu>
+
+                            <p:selectCheckboxMenu id="faseIII" value="#{checkboxView.selectedTurmas}" label="Fase III"
+                                                  filter="true" filterMatchMode="startsWith" panelStyle="width:250px">
+                                <f:selectItems value="#{checkboxView.turmas}" />
+                            </p:selectCheckboxMenu>
+
+                            <p:selectCheckboxMenu id="eja" value="#{checkboxView.selectedTurmas}" label="Eja"
+                                                  filter="true" filterMatchMode="startsWith" panelStyle="width:250px">
+                                <f:selectItems value="#{checkboxView.turmas}" />
+                            </p:selectCheckboxMenu>
+
+                        </h:panelGrid>
                     </p:tab>
 
                 </p:tabView>
+
 
 
                 <ui:insert name="content">

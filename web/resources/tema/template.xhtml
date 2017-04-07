@@ -113,7 +113,11 @@
                             </p:selectOneMenu>
 
                             <p:outputLabel value="Cidade" ></p:outputLabel>
-                            <p:inputText ></p:inputText>
+                            <p:selectOneMenu id="cidade" value="" >
+                                <f:selectItem itemLabel="Selecione..." itemValue="" />
+
+
+                            </p:selectOneMenu>
                             <p:outputLabel value="Cep" ></p:outputLabel>
                             <p:inputText ></p:inputText>
                             <p:outputLabel value="Telefone" ></p:outputLabel>
@@ -266,6 +270,9 @@
                             </p:selectCheckboxMenu>
 
                         </h:panelGrid>
+                        
+                           <h3 style="margin-top:0">Informe as Disciplinas da Sua Escola</h3>
+                        <p:separator />
                     </p:tab>
 
                 </p:tabView>

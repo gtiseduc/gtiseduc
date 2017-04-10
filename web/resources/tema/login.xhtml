@@ -1,44 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:p="http://primefaces.org/ui"
-      xmlns:f="http://java.sun.com/jsf/core">
- 
-    <f:view contentType="text/html">
-       
-        <h:head>
-            <f:facet name="first">
-                <meta content='text/html; charset=UTF-8' http-equiv="Content-Type"/>
-                <title>SISMEPA</title>
-            </f:facet>
-        </h:head>
-      
-        
-        <h:body>
-<div align="center"> 
-            <p:layout style="min-width:1020px;max-width:1020px;min-height:600px">  
-            
-          <ui:include src="resources/tema/header.xhtml"  />
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
 
-               
-               
-                <p:layoutUnit position="center">
-                    Welcome to Sismepa
-                        
-                </p:layoutUnit>
+    <h:head>
+        <title>${pageTitle}</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <h:outputStylesheet name="css/default.css" />
+    </h:head>
 
-                
-             
-                <p:layoutUnit position="south" size="100" closable="true" collapsible="true">
-                    Footer
-                </p:layoutUnit>   
-                
-            </p:layout>
+    <h:body>
+        <div id="container">
 
-</div>
-        </h:body>
-        
-        
-        
-    </f:view>
+            <div id="header" class="header">
+                <ui:include src="header.xhtml" />
+            </div>
+
+
+            <div id="contentMenu" class="contentMenu">
+
+                <ui:insert name="contentMenu">
+
+
+
+
+
+                    <div id="contentLogin">
+                       
+                        <div id ="nomeSistema">
+                            <br><font size="15" style="text-align:left;" > SISMEPA</font></br>
+                        </div>
+
+                        <div id ="logoSistema">
+
+                        </div>
+
+                        <div id ="nomeSistema">
+                            <h:panelGrid columns="1"  style="width: 70%; margin-top: 0px " columnClasses="rotulo" > 
+                           
+                                <p:outputLabel value="Login*"></p:outputLabel>
+                            <p:inputText></p:inputText>
+                            <p:outputLabel value="Senha*"></p:outputLabel>
+                            <p:password></p:password>
+                            </h:panelGrid>
+                            
+                            <p:commandButton value="ENTRAR" id="butaoEnviar"></p:commandButton>
+                        </div>
+
+
+
+
+
+
+                    </div>
+
+                </ui:insert>
+            </div>
+
+
+
+
+            <div id="footer" class="footer">
+
+                <ui:include src="footer.xhtml" />
+
+            </div>
+
+        </div>
+
+
+    </h:body>
+
 </html>

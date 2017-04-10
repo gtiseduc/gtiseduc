@@ -96,9 +96,57 @@ body {
     min-width:710px;
     padding: 5px;
     margin: 5px 5px;
-    /*border: 1px solid navy;*/
+    border: 1px solid navy;
     min-height: 325px;
 }
+
+
+#contentLogin {
+
+   overflow:hidden;
+    color: #01425E;
+    min-width:410px;
+    padding: 5px;
+    margin: 5px 5px;
+   /* background-image:url("#{resource['img:teste.png']}");
+    */border: 3px solid navy;
+    min-height: 325px;
+}
+
+#nomeSistema {
+
+   /*overflow:hidden;*/
+    float:left;
+    color: #01425E;
+     width:310px;
+    font-family:Arial;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 2px;
+    margin: 15px 15px;
+   
+    border: 3px solid navy;
+    min-height: 325px;
+}
+#butaoEnviar{
+    
+     margin: 5px 0px 0px 175px;
+    
+}
+#logoSistema {
+
+   /*overflow:hidden;*/
+   float:left;
+    color: #01425E;
+     width:310px;
+    padding: 5px;
+    margin: 5px 5px;
+   background-image:url("#{resource['img:teste.png']}");
+   
+    border: 3px solid navy;
+    min-height: 325px;
+}
+
 
 #footer {
     /*font-family:Arial;*/

@@ -8,14 +8,14 @@
     <h:head>
         <title>${pageTitle}</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <h:outputStylesheet name="css/default.css" />
+        <h:outputStylesheet name="css/styleLogin.css" />
     </h:head>
 
     <h:body>
         <div id="container">
 
             <div id="header" class="header">
-                <ui:include src="header.xhtml" />
+               
             </div>
 
 
@@ -28,25 +28,26 @@
 
 
                     <div id="contentLogin">
-                       
+
                         <div id ="nomeSistema">
-                            <br><font size="15" style="text-align:left;" > SISMEPA</font></br>
+                            <h3>SISMEPA</h3>
                         </div>
 
                         <div id ="logoSistema">
 
                         </div>
 
-                        <div id ="nomeSistema">
-                            <h:panelGrid columns="1"  style="width: 70%; margin-top: 0px " columnClasses="rotulo" > 
+                        <div id ="formSistema">
                            
+                            <h:panelGrid columns="1"  style="width: 70%; margin-top: 0px " columnClasses="rotulo" > 
+
                                 <p:outputLabel value="Login*"></p:outputLabel>
-                            <p:inputText></p:inputText>
-                            <p:outputLabel value="Senha*"></p:outputLabel>
-                            <p:password></p:password>
+                                <p:inputText></p:inputText>
+                                <p:outputLabel value="Senha*"></p:outputLabel>
+                                <p:password></p:password>
                             </h:panelGrid>
-                            
-                            <p:commandButton value="ENTRAR" id="butaoEnviar"></p:commandButton>
+
+                            <p:commandButton value="ENTRAR" id="butaoEnviar"></p:commandButton> 
                         </div>
 
 
@@ -62,7 +63,7 @@
 
 
 
-            <div id="footer" class="footer">
+            <div id="footer">
 
                 <ui:include src="footer.xhtml" />
 

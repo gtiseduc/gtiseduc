@@ -1,0 +1,133 @@
+body {
+    background-color: #ffffff;
+    font-size: 12px;
+    font-family: Verdana, "Verdana CE", Arial, "Arial CE", "Lucida Grande CE", lucida, "Helvetica CE", sans-serif;
+    color: #000000;
+    margin: 0px;
+}
+
+#container {
+
+
+    margin-left: 100px;
+    margin-right: 100px;
+    border-radius: 0px;
+
+}
+
+
+
+#header {
+
+    font-family:Arial;
+    font-weight: bold;
+    height: 205px;
+    background-image:url("#{resource['img:header.png']}");
+    color: white;
+    padding: 0px;
+    margin: 0px 0px 5px 0px;
+
+}
+
+
+
+
+
+
+
+#contentMenu {
+
+    float:left;
+    overflow:hidden;
+
+    padding: 0px;
+    margin: 0px 145px;
+    border: 0px solid navy;
+
+
+}
+
+#content {
+
+    overflow:hidden;
+    padding: 0px;
+    margin: 0px 0px;
+    border: 0px solid navy;
+
+}
+
+
+#contentLogin {
+
+    overflow:hidden;
+    color: #01425E;
+    padding: 0px;
+    margin: 0px 0px;
+    /* background-image:url("#{resource['img:teste.png']}");
+    */border: 0px solid navy;
+
+}
+
+#nomeSistema {
+
+    /*overflow:hidden;*/
+    float:left;
+    color: #01425E;
+    font-family:Arial;
+    font-weight: bold;
+    font-size: 60px;
+    padding: 0px;
+    margin: 0px 0px;
+    border: 0px solid navy;
+
+}
+
+
+#logoSistema {
+
+    /*overflow:hidden;*/
+    float:left;
+    color: #01425E;
+    width:310px;
+    padding: 0px;
+    margin: -6px 0px;
+    background-image:url("#{resource['img:Tes.png']}");
+    background-repeat: no-repeat;
+    border: 0px solid navy;
+    min-height: 250px;
+}
+
+#formSistema {
+
+    overflow:hidden;
+    float:left;
+    color: #01425E;
+    font-family:Arial;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 2px;
+    margin: 47px 0px;
+    border: 0px solid navy;
+
+}
+#butaoEnviar{
+
+    margin: 10px 0px 0px 107px;
+
+}
+
+
+
+#footer {
+    /*font-family:Arial;*/
+    clear:both;
+    text-align:center;
+    height: 205px;
+    /*background-color: #036fab;*/
+    background-image:url("#{resource['img:ro.png']}");
+     font-family:Arial;
+    font-weight: bold;
+    color: white;
+    padding: 0px;
+    margin: 0px 0px 0px 0px;
+}
